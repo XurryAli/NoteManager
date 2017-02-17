@@ -1,0 +1,269 @@
+/**
+ * By Xurry
+ * time  2015/10/21
+ */
+
+/** icon fonts字体 **/
+
+@font-face {
+  font-family: 'iconfont';
+  src: url('../font/iconfont.eot');
+  /* IE9*/
+  src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../font/iconfont.woff') format('woff'), /* chrome、firefox */
+  url('../font/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('../font/iconfont.svg#iconfont') format('svg');
+  /* iOS 4.1- */
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/** 整体样式 **/
+
+html, body {
+  font-family: Helvetica, Arial, sans-serif，Microsoft Yahei;
+  background: #EEEEEE;
+}
+.pc-dis-none {
+  display: none;
+}
+
+/** 笔记目录 **/
+
+.note-category {
+  transition: all 0.5s;
+  width: 180px;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 200;
+  position: absolute;
+  background: #BF0449;
+}
+.note-category.fullscreen {
+  left: -180px;
+  opacity: 0;
+}
+.note-cat-top {
+  font-size: 25px;
+  color: white;
+  text-align: center;
+  width: 100%;
+  height: 120px;
+  line-height: 120px;
+}
+, note-cat-list {
+  position: relative;
+}
+.note-cat-list ul li {
+  overflow: hidden;
+}
+.note-cat-list ul li a {
+  display: block;
+  color: white;
+  padding: 10px 0px 10px 35px;
+  text-decoration: none;
+  font-size: 0.875rem;
+}
+.note-cat-list ul li a.active, .note-cat-list ul li a:hover {
+  color: #FFF;
+  background: #313030;
+}
+#new-cat-input {
+  position: absolute;
+  bottom: 80px;
+  border: 0px;
+  left: 11px;
+  height: 20px;
+}
+#new-cat-input.hidden {
+  display: none;
+}
+.note-cat-bottom {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 17px;
+  padding-left: 37px;
+}
+.note-cat-btn {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 5px;
+  text-align: center;
+  background: #313030;
+}
+.note-cat-btn a {
+  text-decoration: none;
+  color: white;
+}
+.note-cat-btn i {
+  font-size: 20px;
+}
+
+/* 笔记列表 */
+
+.note-content {
+  transition: all 0.5s;
+  position: absolute;
+  width: 320px;
+  top: 0px;
+  bottom: 0px;
+  left: 190px;
+  padding: 10px;
+  background: #FFF;
+}
+.note-content.fullscreen {
+  left: -320px;
+  opacity: 0;
+}
+.note-content-top {
+  width: 100%;
+  height: 100px;
+  padding-bottom: 10px;
+}
+.note-content-top-name {
+  padding-top: 34px;
+  padding-left: 20px;
+  float: left;
+  font-size: 25px;
+  color: #BF0449;
+}
+.note-content-addBtn {
+  padding-top: 30px;
+  float: right;
+}
+.note-content-addBtn a {
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+  color: #FFF;
+  background: #BF0449;
+  width: 120px;
+  text-align: center;
+  border-radius: 3px;
+  font-size: 14px;
+}
+.note-content-list ul li a:hover, .note-content-list ul li a.active {
+  border: 1px solid #2EA2E0;
+}
+.note-content-list ul li a {
+  display: block;
+  text-decoration: none;
+  color: #6E6D6D;
+  border: 1px solid #F6F6F6;
+  background: #F6F6F6;
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  height: 102px;
+}
+.note-content-list-item-title {
+  font-weight: bold;
+  padding-bottom: 10px;
+  font-size: 0.875rem;
+}
+.note-content-list-item-detail {
+  line-height: 14px;
+  font-size: 0.75rem;
+}
+.note-content-tips {
+  text-align: center;
+  font-size: 0.875rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -92px;
+  color: #777676;
+}
+.note-content-tips.hidden {
+  display: none;
+}
+
+/** 笔记详情 **/
+
+.note-detail {
+  transition: all 0.5s;
+  position: absolute;
+  left: 520px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: #FFF;
+}
+.note-detail.fullscreen {
+  z-index: 300;
+  position: static;
+  width:50%;
+  float:left;
+}
+.note-detail-top {
+  transition: all 0.5s;
+  height: 120px;
+  color: #FFF;
+  background: #BF0449;
+}
+.note-detail-top.fullscreen {
+  background: #000;
+}
+.note-detail-title {
+  font-size: 30px;
+  width: 80%;
+  float: left;
+  padding-left: 30px;
+  padding-top: 40px;
+  color: #FFF;
+}
+.note-detail-closeBtn {
+  float: right;
+  padding: 40px 20px 0px 0px;
+}
+.note-detail-closeBtn a {
+  transition: 0.5s all;
+  width: 20%;
+  text-decoration: none;
+  color: #FFF;
+}
+.note-detail-closeBtn a.spin {
+  transform: rotate(360deg);
+}
+.note-detail-closeBtn a i {
+  font-size: 30px;
+}
+.note-detail-content {
+  padding: 20px;
+  font-size: 16px;
+  line-height: 20px;
+}
+.note-detail-content p {
+  padding: 10px;
+  font-size: 0.875rem;
+}
+
+/* 预览页面 */
+
+.preview {
+  transition: all 0.5s;
+  width:50%;
+  float: left;
+  background: #FFF;
+  padding:0px;
+  border-left: 1px dashed #000;
+}
+.preview.hidden {
+  display: none;
+}
+.pre_title{
+  background: #000;
+  color: #FFF;
+  line-height: 120px;
+}

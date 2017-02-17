@@ -1,0 +1,149 @@
+/**
+ * By Xurry
+ * time  2015/10/21
+ */
+
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+
+.edit{
+    border-right: 1px solid #cccccc;
+}
+
+/*
+* Preview styles
+*/
+.preview{
+    background-color: rgb(252, 250, 242);
+    padding: 40px;
+    color: #2f2f2f;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.7;
+}
+#pre_title{
+    font-size: 26px;
+    height: 120px;
+    line-height: 85px;
+    padding-left:20px;
+    background-color: gray;
+    color: #FFF;
+}
+
+/*
+* Note title
+*/
+#note_title{
+    display: block;
+    box-sizing: border-box;
+    border: none;
+    padding: 30px 0 30px 30px;
+    font-size: 30px;
+    line-height: 30px;
+    /*height: 50px;*/
+    color: rgb(85, 85, 85);
+    color: #FFF;
+}
+#note_title:focus{
+    border: none;
+    outline: none;
+}
+
+/*
+* Toolbar style
+*/
+.toolbar{
+    margin: 0;
+    height: 40px;
+    width: 100%;
+    line-height: 40px;
+    list-style-type: none;
+    background-color: #dedede;
+    border-bottom: 1px solid #d9d9d9;
+}
+
+.item{
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    float: left;
+    list-style: none;
+    margin-left: 25px;
+}
+
+.item:hover{
+    background-color: rgb(85, 85, 85);
+}
+
+.item a{
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+}
+.item a:link, .item a:visited, .item a:hover, .item a:active{
+    color: #555555;
+}
+
+.item a:hover{
+    color: white;
+}
+
+/*
+* Note content style
+*/
+#note_content{
+    width: 100%;
+    border: none;
+    padding: 20px;
+    overflow-x: auto;
+    overflow-y: auto;
+    resize: none;
+    color: #2f2f2f;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 100;
+}
+
+#note_content:focus{
+    outline: none;
+}
+
+.text{
+    padding: 30px 30px 0;
+    margin-bottom: 0;
+    resize: none;
+    color: #2f2f2f;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+/*
+* General style
+*/
+.w50{
+    width: 50%;
+    float: left;
+}
+
+.clearfix{
+    *zoom:1
+}
+.clearfix:before,.clearfix:after{
+    display:table;
+    content:"";
+    line-height:0
+}
+.clearfix:after{
+    clear:both
+}
+
+.hidden{
+    display: none; !important
+}

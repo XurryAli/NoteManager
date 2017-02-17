@@ -1,2 +1,6 @@
 # NoteManager
-It's a project of NoteManager based on Markdown.
+
+>一个Note笔记
+
+#### by Xurry
+

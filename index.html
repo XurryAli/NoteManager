@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>NoteManager</title>
+	<meta name="keywords" content="NoteManager">
+	<meta name="description" content="NoteManager">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	
+	<!-- 引入重置样式CSS -->
+	<link rel="stylesheet" href="css/reset.css">
+	<!-- 主样式文件 -->
+	<link rel="stylesheet" href="css/main.css">
+	<!-- 引入github-markdown -->
+	<link rel="stylesheet" href="css/github-markdown.css">
+	<!--媒体查询-->
+	<link rel="stylesheet" media="screen and (min-device-width: 980px)" href="css/PCTerminal.css">
+	<link rel="stylesheet" media="screen and (max-device-width: 980px)" href="css/MobileTerminal.css">
+</head>
+
+<body>
+	<div class="main-content">
+		<div class="note-category">
+			<div class="note-cat-top">
+				NoteManager
+			</div>
+			<div class="note-cat-list">
+				<ul>
+				</ul>
+				<input type="text" id="new-cat-input" class="hidden" />
+			</div>
+			<div class="note-cat-bottom">
+				<div class="note-cat-btn note-cat-addBtn">
+					<a href="#"><i class="iconfont">&#xe604;</i></a>
+				</div>
+				<div class="note-cat-btn note-cat-delBtn">
+					<a href="#"><i class="iconfont">&#xe603;</i></a>
+				</div>
+			</div>
+		</div>
+		<!--添加遮罩层-->
+		<div id="hover-content" class="pc-dis-none mob-dis-none">
+			<p><i class="iconfont">&#xe607;</i>点击此处返回<i class="iconfont">&#xe607;</i></p>
+		</div>
+		<div class="note-content">
+			<div class="note-content-top">
+				<!--增加note目录按钮-->
+				<div class="note-category-showBtn pc-dis-none">
+					<a href="#"><i class="iconfont">&#xe600;</i></a>
+				</div>
+				<div class="note-content-top-name">
+					Notes
+				</div>
+				<div class="note-content-addBtn">
+					<a href="#"><i class="iconfont">&#xe602;</i>New notes</a>
+				</div>
+			</div>
+			<div class="note-content-list">
+				<ul>
+				</ul>
+				<p class="note-content-tips hidden">暂无笔记,请点击上方按钮添加</p>
+			</div>
+		</div>
+		<div class="note-detail">
+			<div class="note-detail-top">
+				<div class="note-detail-title" contentEditable="true" id="note_title">
+					点击这里添加正文
+				</div>
+				<div class="note-detail-closeBtn">
+					<a href="#"><i class="iconfont">&#xe601;</i></a>
+				</div>
+			</div>
+			<textarea class="note-detail-content" contentEditable="true" id="note_content">
+			</textarea>
+		</div>
+		<div class="preview hidden">
+			<h1 id="pre_title">preview</h1>
+			<article class="markdown-body"></article>
+		</div>
+	</div>
+	<!-- 项目模版开始 -->
+	<script type="text/template" id="noteCatItemTmpl">
+		<li>
+			<a href="#" data-id=${data.id}>
+				<span class="note-cat-list-item-name">${data.name}</span>
+				<span class="note-cat-list-item-num">(${data.num})</span>
+			</a>
+		</li>
+	</script>
+	<script type="text/template" id="noteListTmpl">
+		<li>
+			<a href="#" data-id=${data.id}>
+				<div class="note-content-list-item-title">
+					${data.title}
+				</div>
+				<div class="note-content-list-item-detail">
+					${data.detail}
+				</div>
+			</a>
+		</li>
+	</script>
+	<!-- 引入JS文件 -->
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="js/data.js"></script>
+	<script type="text/javascript" src="js/controller.js"></script>
+	<script type="text/javascript" src="js/marked.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript" src="js/mobile.js"></script>
+</body>
+
+</html>
